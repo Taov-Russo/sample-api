@@ -21,7 +21,7 @@ public class PipelinesContollers : ControllerBase
     }
 
     [SwaggerOperation("Run a pipeline")]
-    [HttpPost("{pipelineId:int}")]
+    [HttpPost("{pipelineId:int}/run")]
     [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> RunPipeline([FromRoute] int pipelineId)
